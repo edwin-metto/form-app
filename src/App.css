@@ -1,21 +1,19 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  background-color: black; 
+  background-size: cover;
+  height: 100vh; 
+  background-position: center;
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 100vh; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,15 +22,52 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.email{
+  background-color: azure;
+  margin-left: 400px;
+  margin-right: 400px;
+  height: 30vh;
+  border-radius: 20px;
+  color: blue;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.email input{
+  border-radius: 10px;
+  color: blue;
+  font-size: 25px;
+}
+.password{
+  background-color: azure;
+  margin-left:400px;
+  margin-right: 400px;
+  height: 30vh;
+  border-radius: 20px;
+  color: blue;
+}
+.password input{
+  border-radius: 10px;
+  font-size: 25px;
+  color: blue;
+}
+.username{
+  background-color: azure;
+  margin-left: 400px;
+  margin-right: 400px;
+  height: 30vh;
+  border-radius: 20px;
+  color: blue;
+}
+.username input{
+  border-radius: 10px;
+  font-size: 25px;
+  color: blue;
+}
+.footer button{
+  color: blue;
+  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  
+}
+.footer button:hover{
+  color: green;
 }
