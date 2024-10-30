@@ -1,73 +1,71 @@
 html, body {
   height: 100%;
   margin: 0;
+  font-family: 'Arial', sans-serif; 
 }
 
 .App {
-  text-align: center;
-  background-color: black; 
-  background-size: cover;
-  height: 100vh; 
-  background-position: center;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh; 
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: #f0f8ff; 
+  height: 100vh; 
 }
 
-.email{
-  background-color: azure;
-  margin-left: 400px;
-  margin-right: 400px;
-  height: 30vh;
-  border-radius: 20px;
-  color: blue;
-}
-.email input{
+.form-container {
+  background-color: white;
   border-radius: 10px;
-  color: blue;
-  font-size: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px; 
+  width: 90%;
+  max-width: 600px; 
 }
-.password{
-  background-color: azure;
-  margin-left:400px;
-  margin-right: 400px;
-  height: 30vh;
-  border-radius: 20px;
-  color: blue;
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
 }
-.password input{
-  border-radius: 10px;
-  font-size: 25px;
-  color: blue;
+
+.body {
+  margin-bottom: 20px;
 }
-.username{
-  background-color: azure;
-  margin-left: 400px;
-  margin-right: 400px;
-  height: 30vh;
-  border-radius: 20px;
-  color: blue;
+
+.input-field {
+  margin-bottom: 15px;
 }
-.username input{
-  border-radius: 10px;
-  font-size: 25px;
-  color: blue;
+
+input[type='text'], textarea {
+  width: 100%; 
+  padding: 10px;
+  border: 1px solid #ccc; 
+  border-radius: 5px;
+  font-size: 16px;
 }
-.footer button{
-  color: blue;
-  font-size: 20px;
-  border-radius: 8px;
+
+input[type='text']:focus, textarea:focus {
+  border-color: #007bff; 
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer button {
+  background-color: #007bff; 
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  
+  transition: background-color 0.3s;
 }
-.footer button:hover{
-  color: green;
+
+.footer button:hover {
+  background-color: #0056b3; 
+}
+
+.footer button:disabled {
+  background-color: #ccc; 
+  cursor: not-allowed;
 }

@@ -1,39 +1,42 @@
 import React, { useState } from 'react';
+import FirstName from './FirstName';
+import LastName from './LastName';
 import Email from './Email';
-import Username from './Username';
-import Password from './Password';
-
+import SchoolName from './SchoolName';
+import PersonalStatement from './PersonalStatement';
 
 function Form() {
     const [page, setPage] = useState(0);
     const [formData, setFormData] = useState({
+        FirstName: "",
+        LastName: "",
         Email: "",
-        Username: "",
-        Password: ""
+        SchoolName: "",
+        PersonalStatement: ""
     });
 
-    const titles = ["Email", "Username", "Password"];
+    const titles = ["First Name", "Last Name", "Email", "School Name", "Personal Statement"];
     const totalSteps = titles.length;
 
     const Display = () => {
         switch (page) {
             case 0:
-                return <Email formData={formData} setFormData={setFormData} />;
+                return <FirstName formData={formData} setFormData={setFormData} />;
             case 1:
-                return <Username formData={formData} setFormData={setFormData} />;
+                return <LastName formData={formData} setFormData={setFormData} />;
             case 2:
-                return <Password formData={formData} setFormData={setFormData} />;
+                return <Email formData={formData} setFormData={setFormData} />;
+            case 3:
+                return <SchoolName formData={formData} setFormData={setFormData} />;
+            case 4:
+                return <PersonalStatement formData={formData} setFormData={setFormData} />;
             default:
                 return null;
         }
     };
 
-    const progressPercentage = ((page + 1) / totalSteps) * 100;
-
     return (
         <div className='form'>
-            
-                
             <div className="form-container">
                 <div className="header">
                     <h1>{titles[page]}</h1>
